@@ -43,12 +43,12 @@ const User = ({ userItems }) => {
           ) : null}
           <p>{reposCount} repositories </p>
           {blog ? (
-            <a href={blog} target="_blank">
+            <a href={blog} target="_blank" className="user__link">
               <Link /> {blog}
             </a>
           ) : null}
           {
-            <a href={url} target="_bland">
+            <a href={url} target="_bland" className="user__link">
               go to github profile
             </a>
           }

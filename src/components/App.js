@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, ListGroup } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
 
 import useGitService from "../services/GitService";
 import Header from "./Header";
+import Hello from "./Hello";
 import SearchUser from "./SearchUser";
 import Spinner from "./Spinner";
 import User from "./User";
@@ -31,6 +32,8 @@ const App = () => {
     <>
       <Header usersLoaded={onUsersLoaded} />
       <Container>
+        {users.length > 0 ? null : <Hello />}
+
         <div className="main">
           <div
             className="userList"
